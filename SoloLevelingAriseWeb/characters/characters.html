@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solo Level Rising - Characters</title>
+    <link rel="stylesheet" href="../stylesC.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="../start.html">SoloLevelRising</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="characters.html">Characters</a></li>
+                <li><a href="/weapons/weapons.html">Weapons</a></li>
+                <li><a href="/tips/tips.html">Tips</a></li>
+                <li><a href="../forum.html">Forum</a></li>
+            </ul>
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="character-filter">
+            <button>Rare</button>
+            <button>Epic</button>
+            <button>Legendary</button>
+            <button>Mythic</button>
+            <div class="dropdown">
+                <button class="dropbtn">...</button>
+                <div class="dropdown-content">
+                    <a href="#">Filter 1</a>
+                    <a href="#">Filter 2</a>
+                    <a href="#">Filter 3</a>
+                </div>
+            </div>
+            <input type="text" placeholder="Suche Charakter..." id="searchInput">
+            <button onclick="searchCharacter()">Suchen</button>
+        </div>
+        <div class="character-navigation">
+            <button class="arrow left" id="scrollLeftBtn">&#10094;</button>
+            <div class="character-grid" id="characterGrid">
+                <div class="character" onclick="showCharacter('Sung Jinwoo')">Sung Jinwoo</div>
+                <div class="character" onclick="showCharacter('Charakter 2')">Charakter 2</div>
+                <div class="character" onclick="showCharacter('Charakter 3')">Charakter 3</div>
+                <div class="character" onclick="showCharacter('Charakter 4')">Charakter 4</div>
+                <div class="character" onclick="showCharacter('Charakter 5')">Charakter 5</div>
+                <div class="character" onclick="showCharacter('Charakter 6')">Charakter 6</div>
+                <div class="character" onclick="showCharacter('Charakter 7')">Charakter 7</div>
+                <div class="character" onclick="showCharacter('Charakter 8')">Charakter 8</div>
+                <div class="character" onclick="showCharacter('Charakter 9')">Charakter 9</div>
+                <div class="character" onclick="showCharacter('Charakter 10')">Charakter 10</div>
+                <div class="character" onclick="showCharacter('Charakter 11')">Charakter 11</div>
+            </div>
+            <button class="arrow right" id="scrollRightBtn">&#10095;</button>
+        </div>
+        <div class="top-characters">
+            <h2>TOP Characters</h2>
+            <div class="top-character-placeholder">
+                <h2>Seo Jiwoo</h2>
+                <img src="../Sources/SeoJiWoo_Portrait_Body.webp">
+            </div>
+            <div class="top-character-placeholder">
+                <h2>Cha Hae-In</h2>
+                <img src="../Sources/cha_card.webp">
+            </div>
+            <div class="top-character-placeholder">
+                <h2>Min Byung Gu</h2>
+                <img src="../Sources/MinByungGu_Portrait_Body.webp">
+            </div>
+        </div>
+        <div class="character-details" id="character-details">
+            <h2 id="character-name"></h2>
+            <p id="character-description"></p>
+        </div>
+    </main>
+    <footer>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+    </footer>
+    <script src="../main.js"></script>
+</body>
+</html>
