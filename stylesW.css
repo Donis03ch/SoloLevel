@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #282b4a;
+    padding: 20px;
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.nav {
+    display: flex;
+    justify-content: center;
+}
+
+.nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.burger-menu .bar {
+    height: 3px;
+    width: 25px;
+    background: #fff;
+    margin: 4px;
+    border-radius: 3px;
+}
+.main {
+    padding: 20px;
+}
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.weapon-filter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.weapon-filter input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.weapon-filter button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #19153d;
+    color: #fff;
+    cursor: pointer;
+}
+
+.weapon-filter .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.weapon-filter .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.weapon-filter .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.weapon-filter .dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.weapon-filter .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+#searchInput {
+    margin-left: 10px;
+    padding: 10px;
+}
+
+#searchButton {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.weapon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    overflow-y: scroll;
+    width: 80%;
+    max-height: 300px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.weapon-grid::-webkit-scrollbar {
+    display: none;
+}
+
+.weapon {
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    cursor: pointer;
+}
+
+.scroll-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-right: 10px;
+}
+
+.scroll-points {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.point {
+    width: 10px;
+    height: 10px;
+    background-color: #ddd;
+    margin: 5px;
+    border-radius: 50%;
+    cursor: none;
+}
+
+.point.active {
+    background-color: #19153d;
+}
+
+.top-weapons {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.top-weapon {
+    width: 30%;
+    height: auto;
+    background: #ddd;
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.weapon-details {
+    width: 100%;
+    background-color: #f9f9f9;
+    margin-top: 20px;
+    padding: 20px;
+    display: none;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 800px) {
+    .nav {
+        display: none;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+
+    .main-content {
+        padding: 10px;
+    }
+
+    .filter-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .scroll-buttons {
+        align-items: center;
+    }
+
+    .top-weapon {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #282b4a;
+    color: #fff;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger-menu span {
+    height: 3px;
+    width: 25px;
+    background: #fff;
+    margin: 4px;
+    border-radius: 3px;
+}
+
+main {
+    padding: 20px;
+
+}
+
+.character-filter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.character-filter input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.character-filter button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #19153d;
+    color: #fff;
+    cursor: pointer;
+}
+
+.character-filter .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.character-filter .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.character-filter .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.character-filter .dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.character-filter .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.character-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.character-grid {
+    display: flex;
+    overflow-x:hidden;
+    gap: 10px;
+    max-width: 80%;
+}
+
+.character {
+    min-width: 100px;
+    padding: 10px;
+    background-color: #f4f4f4;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.arrow {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.top-characters {
+    margin-bottom: 20px;
+}
+
+.top-character-placeholder {
+    width: 30%;
+    height: auto;
+    background: #ddd;
+    margin: 0 10px;
+    display: inline-block;
+}
+
+ .top-character-placeholder .img {
+    display: inline-block;
+    width: 10%;
+
+}
+
+
+footer {
+    padding: 20px;
+    background: #333;
+    color: #fff;
+    text-align: center;
+}
+
+/* Character Details */
+.character-details {
+    margin-top: 20px;
+    padding: 20px;
+    background: #eee;
+    text-align: center;
+    display: none;
+}
+
+.character-details h2 {
+    margin-bottom: 10px;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+@media (max-width: 800px) {
+    nav ul {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .character-filter {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .character-filter input {
+        margin-left: 0;
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .character-grid {
+        max-width: 100%;
+    }
+
+    .top-character-placeholder {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .character {
+        width: calc(100% - 20px);
+    }
+}
+
